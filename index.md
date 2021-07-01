@@ -8,12 +8,19 @@
 ### 设计思维
 ### 商业画布
 
+## 前端
+使用 Angular 制作精美的路由动画
+<https://angular.cn/guide/route-animations>
 ## 架构
 ### 演进式架构
 [浅谈演进式架构](https://poseiden.top/posts/41729/#more)
+### 设计模式
+[设计模式](https://refactoringguru.cn/design-patterns/catalog)
+[23种JAVA设计模式详解](http://c.biancheng.net/design_pattern/)
 ### 中台
 #### 中台 技术框架
 [复杂度应对之道 - 阿里的COLA应用架构](https://www.edjdhbb.com/2019/02/23/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%BA%94%E5%AF%B9%E4%B9%8B%E9%81%93%20-%20%E9%98%BF%E9%87%8C%E7%9A%84COLA%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84/)
+[cola扩展点的使用 业务-用例-场景](https://blog.csdn.net/tian583391571/article/details/106344892/)
 
 ## 敏捷
 [ThoughtWorks的敏捷开发](https://insights.thoughtworks.cn/agile-development-thoughtworks/)
@@ -21,6 +28,7 @@
 [【敏捷进阶】有利才去做敏捷](https://www.bilibili.com/video/BV1fz411q7JB/)
 
 ## 数据
+[数据智能读书雷达](https://blog.csdn.net/toafu/article/details/114132301)
 ### 数据迁移
 [一丰迁移总结](https://www.icloud.com/keynote/0VvKQxtS7QkRmRgf5TKwN_myw)
 [数据库迁移：概念和原则](https://cloud.google.com/architecture/database-migration-concepts-principles-part-1?hl=zh-cn#schema_changes)
@@ -28,6 +36,8 @@
 ## 工具
 ### 书写工具
 [markdown语法](https://www.runoob.com/markdown/md-tutorial.html)
+### debug 
+Arthas 阿里的java诊断工具
 
 ## 培训
 ### inception-101
@@ -38,6 +48,7 @@
 4. 交付计划和汇报
 
 ### arch-101
+### 敏捷工程实践系列
 
 ## 专题：
 ### 密码泄漏问题
@@ -51,13 +62,48 @@ git-secrets
 [TDD is dead. Long live testing](https://dhh.dk/2014/tdd-is-dead-long-live-testing.html)
 [缺陷管理实践分享](https://insights.thoughtworks.cn/how-to-manage-defect/)
 [Mockito and JUnit 5 – Using ExtendWith](https://www.baeldung.com/mockito-junit-5-extension)
-
+#### 自动化测试工具 
+Selenium Cypress TestCafe
+#### CMS
+JAMStack Headless CMS 
 
 
 ## 技术顾问
 层次和体系
 ![技术侧 图](https://pic2.zhimg.com/80/v2-7dfa9443317ab8492867c1941c2d2d6d_1440w.jpg)
 [软件技术顾问的培养（一）：新技术顾问必读的十本书以及背后的思考](https://zhuanlan.zhihu.com/p/104637031)
+
+```mermaid
+graph LR
+    A[通用型技术顾问基线能力] --> B[架构能力]
+    A --> C[工程能力]
+    A --> D[编码]
+
+    subgraph 工艺
+        D --> D1[重构]
+        D --> D2[测试驱动开发]
+    end 
+    subgraph 施工
+        C --> C1[持续交付]
+    end
+    subgraph 图纸
+        B --> B1[业务对齐]
+        B --> B2[组织对齐]
+        B --> B3[架构演进和守护]
+        B --> B4[架构风格]
+    end
+
+ 
+
+    A:::classA
+    classDef classA fill:#f88;
+
+```
+
+## 需求管理/业务分析
+需求治理 
+原则 HAT OVER ROLE
+
 
 ## 商业
 [Innosight-Transformation-20-Final] <27-商业>
