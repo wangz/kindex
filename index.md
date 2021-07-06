@@ -4,6 +4,11 @@
 [精益企业原则之：以产品为中心，而非交付项目](https://insights.thoughtworks.cn/lean-enterprise-principal/)
 ### DDD
 [DDD社区](http://domain-driven-design.org/)
+[DDD领域驱动战略篇（3） 上下文映射与协作](http://it.hzqiuxm.com/ddd%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E6%88%98%E7%95%A5%E7%AF%87%EF%BC%883%EF%BC%89/#i-11)
+1.上下文之间的关系，依赖（支付的依赖，不能只看调用关系，双向调用时候，可以看听谁的）。注意：依赖关系可以主动去规划！
+2.上下文的划分，二义性，业务完整性，质量属性/非功能需求
+3.聚合的边界 ，业务一致性
+
 ### 优先级排序
 ### 设计思维
 ### 商业画布
@@ -74,30 +79,47 @@ JAMStack Headless CMS
 [软件技术顾问的培养（一）：新技术顾问必读的十本书以及背后的思考](https://zhuanlan.zhihu.com/p/104637031)
 
 ```mermaid
+%%{init: {'securityLevel': 'loose', 'theme':'base','themeVariables': {}}}%%
+
 graph LR
     A[通用型技术顾问基线能力] --> B[架构能力]
     A --> C[工程能力]
     A --> D[编码]
+subgraph S1[" "]
+    subgraph 图纸
+        B --> B1[业务对齐] --> B1_v[领域驱动设计DDD]
+        B --> B2[组织对齐] --> 康威定律
+        B --> B3[架构演进和守护] --> 演进式架构
+        B --> B4[架构风格]
+    end
 
+    subgraph S2[" "]
+    subgraph 施工
+        C --> 全功能团队
+        C --> C1[敏捷工程] --> xp,scrum
+        C1 --> 持续交付
+    end
     subgraph 工艺
         D --> D1[重构]
         D --> D2[测试驱动开发]
     end 
-    subgraph 施工
-        C --> C1[持续交付]
     end
-    subgraph 图纸
-        B --> B1[业务对齐]
-        B --> B2[组织对齐]
-        B --> B3[架构演进和守护]
-        B --> B4[架构风格]
-    end
-
+end
  
 
     A:::classA
+    B1_v:::classV
+    class S1,S2 classNone
+    classDef classNone stroke-width:0px,fill:white;
     classDef classA fill:#f88;
+    classDef classV stroke-width:0px;
 
+```
+
+```plantuml
+@startuml 
+Bob->Alice: Hello
+@enduml 
 ```
 
 ## 需求管理/业务分析
