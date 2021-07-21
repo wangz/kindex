@@ -27,6 +27,9 @@
 [复杂度应对之道 - 阿里的COLA应用架构](https://www.edjdhbb.com/2019/02/23/%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%BA%94%E5%AF%B9%E4%B9%8B%E9%81%93%20-%20%E9%98%BF%E9%87%8C%E7%9A%84COLA%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84/)
 [cola扩展点的使用 业务-用例-场景](https://blog.csdn.net/tian583391571/article/details/106344892/)
 
+### 微服务
+[Service Mesh发展趋势(续)：棋到中盘路往何方](https://skyao.io/talk/201908-servicemesh-development-trend2/)
+
 ## 敏捷
 [ThoughtWorks的敏捷开发](https://insights.thoughtworks.cn/agile-development-thoughtworks/)
 大团队精益敏捷转型实践
@@ -129,3 +132,24 @@ Bob->Alice: Hello
 
 ## 商业
 [Innosight-Transformation-20-Final] <27-商业>
+
+
+
+## 常用工具命令
+
+#### conda
+```
+conda install
+conda search gatk=3.7
+whick gatk
+conda list
+conda env list
+conda activate xxx
+conda deactivate 
+conda remove -n myenv --all
+conda create -n python2 python=2
+
+conda config --show channels
+conda config --set show_channel_urls yes
+conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+```
